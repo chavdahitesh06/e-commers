@@ -5,6 +5,7 @@ import { Button } from "@/components/ui/button";
 import { ShoppingCart, X } from "lucide-react";
 import { Card, CardContent, CardTitle } from "@/components/ui/card";
 import Link from "next/link";
+import routes from "@/components/routes";
 
 export default function Wishlist() {
   const [wishlistItems, setWishlistItems] = useState<any[]>([]);
@@ -82,7 +83,7 @@ export default function Wishlist() {
       )}
       <div className="mt-6 text-center">
         {/* Link to continue shopping */}
-        <Link href="/shop">
+        <Link href={routes.home}>
           <Button variant="secondary">Continue Shopping</Button>
         </Link>
       </div>
